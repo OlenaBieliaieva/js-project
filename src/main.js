@@ -56,10 +56,11 @@ const charityElem = document.querySelector('.support-funds-list');
 function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }) => {
-      return `<li support-funds-list-link">
+      return `<li class="support-funds-list-link">
             <a class="support-funds-list-link-image-link" href="${url}">
                 <img class="support-funds-list-link-image" src="${img}"
-                    alt="${title} target="_blank"" 
+                    alt="${title}" target="_blank" 
+                    rel="noopener noreferrer nofollow"
             </a>
         </li>`;
     })
@@ -68,24 +69,24 @@ function fundsMarkup() {
 }
 fundsMarkup();
 
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+const swiper = new Swiper('.support-funds-list', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
