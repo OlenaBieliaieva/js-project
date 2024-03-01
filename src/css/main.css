@@ -63,7 +63,9 @@
   letter-spacing: -0.04em;
   color: #fff;
 }
-
+.support-funds-list-link-image {
+  filter: brightness(0) invert(1);
+}
 .is-hidden {
   visibility: hidden;
 }
@@ -97,6 +99,9 @@
 }
 .main-page-books-render {
   margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24;
 }
 .main-page-book-render-item {
   width: 180px;
@@ -142,3 +147,23 @@
   color: #111;
   background-color: #fff;
 }
+
+/* -----------------------------swiper----------------------- */
+.swiper {
+  width: 159px;
+  height: 292px;
+}
+/* .swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: left center;
+} */
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  top: auto;
+
+  /* bottom: calc(var(--swiper-navigation-size) / 2); */
+}
+/* .swiper-slide {
+} */

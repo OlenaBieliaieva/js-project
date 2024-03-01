@@ -52,41 +52,33 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 const charityElem = document.querySelector('.support-funds-list');
+// const swiperyElem = document.querySelector('.swiper');
 
 function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }) => {
-      return `<li class="support-funds-list-link">
+      return `<div class="swiper-slide"> <li class="support-funds-list-link">
             <a class="support-funds-list-link-image-link" href="${url}">
                 <img class="support-funds-list-link-image" src="${img}"
-                    alt="${title}" target="_blank" 
+                    alt="${title}" target="_blank"
                     rel="noopener noreferrer nofollow"
             </a>
-        </li>`;
+        </li></div>`;
     })
     .join('');
   charityElem.innerHTML = result;
 }
 fundsMarkup();
 
-const swiper = new Swiper('.support-funds-list', {
-  // Optional parameters
+const swiper = new Swiper('.swiper', {
   direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
+  loop: false,
+  effect: 'slide',
+  slidesPerView: 6,
+  slidesPerGroup: 6,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
   },
 });
