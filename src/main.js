@@ -46,9 +46,7 @@ const charityFunds = [
   },
 ];
 
-// import Swiper JS
 import Swiper from 'swiper';
-// import Swiper styles
 import 'swiper/css';
 
 const charityElem = document.querySelector('.support-funds-list');
@@ -56,20 +54,15 @@ const swiperBtnElem = document.querySelector('.swiper-button');
 
 function fundsMarkup() {
   const result = charityFunds
-    .map(({ title, url, img }) => {
-      return `<div class="swiper-slide"> <a class="support-funds-list-link-image-link" href="${url}">
+    .map(({ title, url, img }, index) => {
+      const paddedIndex = (index + 1).toString().padStart(2, '0');
+      return `<div class="swiper-slide support-funds-list-link"> 
+        <p class="support-fund-number">${paddedIndex}</p>
+      <a class="support-funds-list-link-image-link" href="${url}">
                 <img class="support-funds-list-link-image" src="${img}"
                     alt="${title}" target="_blank"
                     rel="noopener noreferrer nofollow"
             </a></div>`;
-
-      return `<li class="support-funds-list-link"> <div class="swiper-slide">
-            <a class="support-funds-list-link-image-link" href="${url}">
-                <img class="support-funds-list-link-image" src="${img}"
-                    alt="${title}" target="_blank"
-                    rel="noopener noreferrer nofollow"
-            </a>
-        </div></li>`;
     })
     .join('');
   charityElem.innerHTML = result;
@@ -82,14 +75,11 @@ const swiper = new Swiper('.swiper', {
   effect: 'slide',
   slidesPerView: 6,
   slidesPerGroup: 6,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
 });
-// swiperBtnElem.addEventListener('click', onBtnClick());
 
-// function onBtnClick(e) {
-//   console.log('click');
-//   swiper.slideNextEl(2000);
-// }
+swiperBtnElem.addEventListener('click', onBtnClick);
+
+function onBtnClick(e) {
+  swiper.slideNext(2000);
+  //  swiper.sliderPrev(3000);
+}

@@ -29,15 +29,9 @@
 }
 .support-funds-list {
   margin-bottom: 24px;
-  list-style-type: none;
-  counter-reset: item;
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
-  width: 159px;
-  height: 292px;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
 }
 .support-fund-number {
   font-family: 'DM Sans', sans-serif;
@@ -52,17 +46,6 @@
   gap: 16px;
   align-items: center;
 }
-.support-funds-list-link::before {
-  display: inline-block;
-  content: counter(item, decimal-leading-zero) ' ';
-  counter-increment: item;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.28571;
-  letter-spacing: -0.04em;
-  color: #fff;
-}
 .support-funds-list-link-image {
   filter: brightness(0) invert(1);
 }
@@ -72,9 +55,11 @@
   border-radius: 100%;
   outline: none;
   border: none;
+  background-color: #fff;
+  /* transform: rotate(90deg); */
 }
 .swiper-button-icon {
-  fill: #fff;
+  fill: #4f2ee8;
 }
 .is-hidden {
   visibility: hidden;
@@ -164,17 +149,4 @@
   height: 292px;
   margin: 0;
 }
-/* .swiper .swiper-button-next,
-.swiper .swiper-button-prev {
-  left: 50%;
-  transform: rotate(90deg);
-  transform-origin: left center;
-} */
-/* .swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-  top: auto; */
-
-/* bottom: calc(var(--swiper-navigation-size) / 2); */
-
-/* .swiper-slide {
-} */
+/* ---------------------------------------------------------- */
