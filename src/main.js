@@ -52,12 +52,18 @@ import Swiper from 'swiper';
 import 'swiper/css';
 
 const charityElem = document.querySelector('.support-funds-list');
-// const swiperyElem = document.querySelector('.swiper');
+const swiperBtnElem = document.querySelector('.swiper-button');
 
 function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }) => {
-      return ` <li class="support-funds-list-link"> <div class="swiper-slide">
+      return `<div class="swiper-slide"> <a class="support-funds-list-link-image-link" href="${url}">
+                <img class="support-funds-list-link-image" src="${img}"
+                    alt="${title}" target="_blank"
+                    rel="noopener noreferrer nofollow"
+            </a></div>`;
+
+      return `<li class="support-funds-list-link"> <div class="swiper-slide">
             <a class="support-funds-list-link-image-link" href="${url}">
                 <img class="support-funds-list-link-image" src="${img}"
                     alt="${title}" target="_blank"
@@ -76,9 +82,14 @@ const swiper = new Swiper('.swiper', {
   effect: 'slide',
   slidesPerView: 6,
   slidesPerGroup: 6,
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
+// swiperBtnElem.addEventListener('click', onBtnClick());
+
+// function onBtnClick(e) {
+//   console.log('click');
+//   swiper.slideNextEl(2000);
+// }
