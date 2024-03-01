@@ -57,13 +57,13 @@ const charityElem = document.querySelector('.support-funds-list');
 function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }) => {
-      return `<div class="swiper-slide"> <li class="support-funds-list-link">
+      return ` <li class="support-funds-list-link"> <div class="swiper-slide">
             <a class="support-funds-list-link-image-link" href="${url}">
                 <img class="support-funds-list-link-image" src="${img}"
                     alt="${title}" target="_blank"
                     rel="noopener noreferrer nofollow"
             </a>
-        </li></div>`;
+        </div></li>`;
     })
     .join('');
   charityElem.innerHTML = result;

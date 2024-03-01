@@ -66,6 +66,16 @@
 .support-funds-list-link-image {
   filter: brightness(0) invert(1);
 }
+.swiper-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+}
+.swiper-button-icon {
+  fill: #fff;
+}
 .is-hidden {
   visibility: hidden;
 }
@@ -152,6 +162,7 @@
 .swiper {
   width: 159px;
   height: 292px;
+  margin: 0;
 }
 /* .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
