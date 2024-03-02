@@ -51,8 +51,9 @@ import 'swiper/css';
 
 const charityElem = document.querySelector('.swiper-wrapper');
 const swiperBtnElem = document.querySelector('.swiper-button');
+const swiperBtnUpElem = document.querySelector('.swiper-button-up');
 
-function fundsMarkup() {
+export function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }, index) => {
       const paddedIndex = (index + 1).toString().padStart(2, '0');
@@ -81,5 +82,9 @@ swiperBtnElem.addEventListener('click', onBtnClick);
 
 function onBtnClick(e) {
   swiper.slideNext(2000);
-  //  swiper.sliderPrev(3000);
+}
+swiperBtnUpElem.addEventListener('click', onBtnUpClick);
+
+function onBtnUpClick(e) {
+  swiper.slidePrev(2000);
 }
