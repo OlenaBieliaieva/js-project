@@ -52,17 +52,18 @@ import 'swiper/css';
 const charityElem = document.querySelector('.swiper-wrapper');
 const swiperBtnElem = document.querySelector('.swiper-button');
 const swiperBtnUpElem = document.querySelector('.swiper-button-up');
+const arrowElem = document.querySelector('.small-left-arrow');
 
 export function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }, index) => {
       const paddedIndex = (index + 1).toString().padStart(2, '0');
       return `<div class="swiper-slide ">       
-      <a class="support-funds-list-link" href="${url}">
+      <a class="support-funds-list-link" href="${url}" target="_blank"
+                    rel="noopener noreferrer nofollow">
       <p class="support-fund-number">${paddedIndex}</p>
                 <img class="support-funds-list-link-image" src="${img}"
-                    alt="${title}" target="_blank"
-                    rel="noopener noreferrer nofollow"
+                    alt="${title}" 
             </a></div>`;
     })
     .join('');
@@ -80,31 +81,56 @@ const swiper = new Swiper('.swiper', {
 
 swiperBtnElem.addEventListener('click', onBtnClick);
 
+let currentClick = 1;
+let numberOfClicks = 2;
+
 function onBtnClick(e) {
-  swiper.slideNext(2000);
-  showSwiperBtnUp();
-  hideSwiperBtn();
+    if (currentClick <= numberOfClicks) {
+        if (currentClick === numberOfClicks) {
+            swiper.slideNext(2000);
+            arrowElem.style.transform = 'rotate(180deg)';
+        }
+      
+        swiper.slidePrev(2000);
+        arrowElem.style.transform = '';
+    }
+    ++currentClick;
 }
-swiperBtnUpElem.addEventListener('click', onBtnUpClick);
-
-function onBtnUpClick(e) {
-  swiper.slidePrev(2000);
-  showSwiperBtn();
-  hideSwiperBtnUp();
+else{
+    currentClick = 1;
+    swiperBtnUpElem.style.transform = '';
+    arrowElem.style.transform = '';
 }
-
-// --------------------- too much but it works
-function showSwiperBtnUp() {
-  swiperBtnUpElem.classList.remove('is-hidden');
-}
-function hideSwiperBtn() {
-  swiperBtnElem.classList.add('is-hidden');
 }
 
-function showSwiperBtn() {
-  swiperBtnElem.classList.remove('is-hidden');
-}
-function hideSwiperBtnUp() {
-  swiperBtnUpElem.classList.add('is-hidden');
-}
-// --------------------------------------------
+
+
+
+// function onBtnClick(e) {
+//   swiper.slideNext(2000);
+//   showSwiperBtnUp();
+//   hideSwiperBtn();
+// }
+// swiperBtnUpElem.addEventListener('click', onBtnUpClick);
+
+// function onBtnUpClick(e) {
+//   swiper.slidePrev(2000);
+//   showSwiperBtn();
+//   hideSwiperBtnUp();
+// }
+
+// // --------------------- too much but it works
+// function showSwiperBtnUp() {
+//   swiperBtnUpElem.classList.remove('is-hidden');
+// }
+// function hideSwiperBtn() {
+//   swiperBtnElem.classList.add('is-hidden');
+// }
+
+// function showSwiperBtn() {
+//   swiperBtnElem.classList.remove('is-hidden');
+// }
+// function hideSwiperBtnUp() {
+//   swiperBtnUpElem.classList.add('is-hidden');
+// }
+// // --------------------------------------------
