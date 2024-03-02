@@ -51,7 +51,8 @@
 .support-funds-list-link-image {
   filter: brightness(0) invert(1);
 }
-.swiper-button {
+.swiper-button,
+.swiper-button-up {
   width: 38px;
   height: 38px;
   border-radius: 100%;
@@ -61,14 +62,35 @@
   /* transform: rotate(90deg); */
   margin: 24px 119px;
 }
+.swiper-button-up {
+  background-color: red;
+}
 .swiper-button-icon {
   fill: #4f2ee8;
 }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.icon-Vector {
+  width: 1.75em;
+}
+
 .is-hidden {
   visibility: hidden;
 }
 /* -----------------------------swiper----------------------- */
 .swiper {
+  width: 159px;
+  height: 292px;
+  margin-left: 0;
+}
+.swiper-container {
   width: 159px;
   height: 292px;
   margin-left: 0;

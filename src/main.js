@@ -82,9 +82,29 @@ swiperBtnElem.addEventListener('click', onBtnClick);
 
 function onBtnClick(e) {
   swiper.slideNext(2000);
+  showSwiperBtnUp();
+  hideSwiperBtn();
 }
 swiperBtnUpElem.addEventListener('click', onBtnUpClick);
 
 function onBtnUpClick(e) {
   swiper.slidePrev(2000);
+  showSwiperBtn();
+  hideSwiperBtnUp();
 }
+
+// --------------------- too much but it works
+function showSwiperBtnUp() {
+  swiperBtnUpElem.classList.remove('is-hidden');
+}
+function hideSwiperBtn() {
+  swiperBtnElem.classList.add('is-hidden');
+}
+
+function showSwiperBtn() {
+  swiperBtnElem.classList.remove('is-hidden');
+}
+function hideSwiperBtnUp() {
+  swiperBtnUpElem.classList.add('is-hidden');
+}
+// --------------------------------------------
