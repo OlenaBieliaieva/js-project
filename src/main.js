@@ -81,30 +81,27 @@ const swiper = new Swiper('.swiper', {
 
 swiperBtnElem.addEventListener('click', onBtnClick);
 
-let currentClick = 1;
-let numberOfClicks = 2;
+// let currentClick = 1;
+// let numberOfClicks = 2;
 
-function onBtnClick(e) {
-    if (currentClick <= numberOfClicks) {
-        if (currentClick === numberOfClicks) {
-            swiper.slideNext(2000);
-            arrowElem.style.transform = 'rotate(180deg)';
-        }
-      
-        swiper.slidePrev(2000);
-        arrowElem.style.transform = '';
-    }
-    ++currentClick;
-}
-else{
-    currentClick = 1;
-    swiperBtnUpElem.style.transform = '';
-    arrowElem.style.transform = '';
-}
-}
+// function onBtnClick(e) {
+//     if (currentClick <= numberOfClicks) {
+//         if (currentClick === numberOfClicks) {
+//             swiper.slideNext(2000);
+//             arrowElem.style.transform = 'rotate(180deg)';
+//         }
 
-
-
+//         swiper.slidePrev(2000);
+//         arrowElem.style.transform = '';
+//     }
+//     ++currentClick;
+// }
+// else{
+//     currentClick = 1;
+//     swiperBtnUpElem.style.transform = '';
+//     arrowElem.style.transform = '';
+// }
+// }
 
 // function onBtnClick(e) {
 //   swiper.slideNext(2000);
