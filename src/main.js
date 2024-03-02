@@ -49,16 +49,16 @@ const charityFunds = [
 import Swiper from 'swiper';
 import 'swiper/css';
 
-const charityElem = document.querySelector('.support-funds-list');
+const charityElem = document.querySelector('.swiper-wrapper');
 const swiperBtnElem = document.querySelector('.swiper-button');
 
 function fundsMarkup() {
   const result = charityFunds
     .map(({ title, url, img }, index) => {
       const paddedIndex = (index + 1).toString().padStart(2, '0');
-      return `<div class="swiper-slide support-funds-list-link"> 
-        <p class="support-fund-number">${paddedIndex}</p>
-      <a class="support-funds-list-link-image-link" href="${url}">
+      return `<div class="swiper-slide ">       
+      <a class="support-funds-list-link" href="${url}">
+      <p class="support-fund-number">${paddedIndex}</p>
                 <img class="support-funds-list-link-image" src="${img}"
                     alt="${title}" target="_blank"
                     rel="noopener noreferrer nofollow"
