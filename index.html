@@ -28,99 +28,89 @@
   </nav> -->
 </header>
   <div class="main-page-container">
-
+    <!-- ------------------------------- aside ----------------------------------------------- -->
     <div class="main-page-left">
 
+
+
+        <!-- --------------------- categories------------------------------ -->
         <div class="main-page-book-categories">
             <ul class="main-page-book-categories"></ul>
         </div>
+        <!-- ---------------------end categories----------------------- -->
 
-        <div class="main-page-charity">
-            <div class="support-title">Support Ukraine</div>
-            <div class="swiper">
-                <div class="swiper-wrapper support-funds-list">
 
-                    <!-- <div class="swiper-slide support-funds-list-link">
-                        <p class="support-fund-number">01</p>
-                        <a class="support-funds-list-link-image-link" href="https://prytulafoundation.org/en">
-                            <img class="support-funds-list-link-image" src="https://prytulafoundation.org/en"
-                                alt="Serhiy Prytula Charity Foundation" target="_blank"
-                                rel="noopener noreferrer nofollow" </a>
-                    </div> -->
 
+        <!-- --------------------- charity------------------------------ -->
+        <div class="main-page-book-categories">
+            <div class="main-page-charity">
+                <div class="support-title">Support Ukraine</div>
+                <div class="swiper">
+                    <div class="swiper-wrapper support-funds-list"> </div>
                 </div>
+
+                <button class="swiper-button" type="button" aria-label="Scroll to show more funds">
+                    Scroll
+                    <svg class="swiper-button-icon" width="22" height="22">
+                        <use href="../img/Vector.svg"></use>
+                    </svg>
+                </button>
             </div>
-
-            <button class="swiper-button" type="button" aria-label="Scroll to show more funds">
-                Scroll
-                <svg class="swiper-button-icon" width="22" height="22">
-                    <use href="../img/Vector.svg"></use>
-                </svg>
-            </button>
-
-            <!-- <ol class="support-funds-list ">
-                <div class="swiper-slide">
-                    <li class="support-funds-list-link">
-                        <a class="support-funds-list-link-image-link" href="${url}">
-                            <img class="support-funds-list-link-image" src="${img}" alt="${title}" target="_blank"
-                                rel="noopener noreferrer nofollow" </a>
-                    </li>
-                </div>
-            </ol> -->
-
         </div>
-
+        <!-- --------------------------end charity------------------------------- -->
     </div>
-
-</div>
-
-</div>
+    <!-- --------------------------end aside-------------------------------------------- -->
 
 
-<!-- ------------------------------ main, home, Alina --------------------------- -->
-<div class="main-page-right">
-    <h2 class="main-page-title">Best Sellers <span class="main-page-title-span">Books</span></h2>
-    <div class="main-page-book">
-        <h3 class="main-page-book-title">COMBINED PRINT & E-BOOK NONFICTION</h3>
-        <ul class="main-page-books-render">
-            <li class="main-page-book-render-item">
-                <a class="book-link" href="#">
-                    <img class="book-image" src="${book_image}" alt="#" />
-                </a>
-                <h2 class="book-title">${list_name}</h2>
-                <p class="book-author">${author}</p>
-            </li>
-        </ul>
-        <div>
-            <button class="button-see-more" type="button">See more</button>
-        </div>
-    </div>
-</div>
-<!-- --------------------------------------------------------------------------- -->
+    <!-- --------------------------- right side, main, home, Alina --------------------------- -->
+    <div class="main-page-right">
+        <h2 class="main-page-title">Best Sellers <span class="main-page-title-span">Books</span></h2>
+        <div class="main-page-book">
+            <h3 class="main-page-book-title">COMBINED PRINT & E-BOOK NONFICTION</h3>
+            <ul class="main-page-books-render">
 
-<div class="pop-up-book-descr is-hidden">
-    <button class="pop-up-book-descr-close-btn" type="button">X</button>
-    <div class="pop-up-book-descr-render">
-        <img class="pop-up-book-descr-image" src="#" alt="description">
-        <div class="pop-up-book-descr-content">
-            <h2 class="pop-up-book-descr-content-title"></h2>
-            <h3 class="pop-up-book-descr-content-author"></h3>
-            <p class="pop-up-book-descr-content-text"></p>
-            <ul class="pop-up-shoppinng-links">
-                <li class="pop-up-shoppinng-link">
-                    <a href="#" target="_blank" class="pop-up-shopping-link-amazon">
-                        <!-- <img src="" alt=""> -->
-                        Amazon</a>
-                </li>
-                <li class="pop-up-shoppinng-link"><a href="#" target="_blank" class="pop-up-shopping-link-apple-books">
-                        <!-- <img src="" alt=""> -->
-                        Apple Boooks</a>
-                </li>
+                <!-- -------------- markup for render ---------------------------------->
+                <!-- <li class="main-page-book-render-item">
+                    <a class="book-link" href="#">
+                        <img class="book-image" src="${book_image}" alt="#" />
+                    </a>
+                    <h2 class="book-title">${list_name}</h2>
+                    <p class="book-author">${author}</p>
+                </li> -->
+                <!-- ------------------------end of markup for render------------- -->
             </ul>
+            <div>
+                <button class="button-see-more" type="button">See more</button>
+            </div>
         </div>
     </div>
-    <button class="pop-up-book-descr-add-to-shopping-list" type="submit">Add to shopping list</button>
-</div>
+    <!-- -------------------------end of right side, main, home, Alina-------------------- -->
+
+    <!-- ------------------------------ pop-up-------------------------------------------- -->
+    <div class="pop-up-book-descr is-hidden">
+        <button class="pop-up-book-descr-close-btn" type="button">X</button>
+        <div class="pop-up-book-descr-render">
+            <img class="pop-up-book-descr-image" src="#" alt="description">
+            <div class="pop-up-book-descr-content">
+                <h2 class="pop-up-book-descr-content-title"></h2>
+                <h3 class="pop-up-book-descr-content-author"></h3>
+                <p class="pop-up-book-descr-content-text"></p>
+                <ul class="pop-up-shoppinng-links">
+                    <li class="pop-up-shoppinng-link">
+                        <a href="#" target="_blank" class="pop-up-shopping-link-amazon">
+                            <!-- <img src="" alt=""> -->
+                            Amazon</a>
+                    </li>
+                    <li class="pop-up-shoppinng-link"><a href="#" target="_blank"
+                            class="pop-up-shopping-link-apple-books">
+                            <!-- <img src="" alt=""> -->
+                            Apple Boooks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="pop-up-book-descr-add-to-shopping-list" type="submit">Add to shopping list</button>
+    </div>
 </div>
 
   <!-- <section>
