@@ -78,9 +78,24 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 6,
   slidesPerGroup: 6,
 });
+swiper.on('reachBeginning', function () {
+  arrowElem.style.transform = '';
+});
+swiper.on('reachEnd', function () {
+  arrowElem.style.transform = 'rotate(180deg)';
+});
 
 swiperBtnElem.addEventListener('click', onBtnClick);
 
+function onBtnClick(e) {
+  if (arrowElem.style.transform == '') {
+    swiper.slideNext(2000);
+  } else {
+    swiper.slidePrev(2000);
+  }
+}
+
+// ---------------------------- for it to work with one btn
 // let currentClick = 1;
 // let numberOfClicks = 2;
 
@@ -102,7 +117,8 @@ swiperBtnElem.addEventListener('click', onBtnClick);
 //     arrowElem.style.transform = '';
 // }
 // }
-
+// ----------------------------------------------------------
+// / ---------------------------- for it to work with two btn
 // function onBtnClick(e) {
 //   swiper.slideNext(2000);
 //   showSwiperBtnUp();
